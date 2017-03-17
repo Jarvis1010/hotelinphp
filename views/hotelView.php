@@ -1,6 +1,6 @@
 <div class="container">
     <div class='row'>
-     <div class="col-sm-12 text-center"><h1>Information About <?php echo $hotel['name']?></h1></div>   
+     <div class="col-sm-12 text-center"><h2>Information About <?php echo $hotel['name']?></h2></div>   
     <div class="col-sm-9">
         <?php 
             echo "<h3>".$hotel['location']['address']."</h3>";
@@ -39,15 +39,16 @@
     </div>    
     </div>
 </div>
+
 <div class="container" ng-app='reviews' ng-controller="ReviewController">
     <div class="row">
         <div class="col-sm-9"><h3>Reviews:</h3></div>
         <div class="col-sm-9">
             <div class="panel panel-primary" ng-repeat="review in reviews">
               <div class="panel-heading">{{review.name}}</div>
-              <div class="panel-body">
-                {{review.review}}
-              </div>
+                  <div class="panel-body">
+                    {{review.review}}
+                  </div>
               <div class="panel-footer">{{review.rating}} out of 5 Stars</div>
             </div>
         </div>
@@ -94,7 +95,9 @@
                      
                   <div class="panel-footer"><button class="btn btn-default">Submit</button></div>
                 </div>
+            </div>    
             </form>
+        
         </div>
     </div>
 </div>
